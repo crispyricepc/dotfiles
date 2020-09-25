@@ -90,7 +90,7 @@ path+=('/home/benjo/bin')
 export PATH
 
 # Aliases
-alias cat='bat'
+alias cat='bat -pp'
 alias lsl='ls -l'
 alias lsla='ls -l -a'
 
