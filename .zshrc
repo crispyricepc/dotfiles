@@ -91,6 +91,8 @@ export PATH
 
 # Aliases
 alias cat='bat'
+alias lsl='ls -l'
+alias lsla='ls -l -a'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
