@@ -84,13 +84,16 @@ source $ZSH/oh-my-zsh.sh
 # Plugins
 source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Bat settings
+export BAT_THEME="Dracula"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 path+=('/home/benjo/.local/bin')
 path+=('/home/benjo/bin')
 export PATH
 
 # Aliases
-alias cat='bat -pp'
+alias cat='bat --pager=never'
 alias lsl='ls -l'
 alias lsla='ls -l -a'
 
