@@ -81,6 +81,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Plugins
+source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # export MANPATH="/usr/local/man:$MANPATH"
 path+=('/home/benjo/.local/bin')
 export PATH
