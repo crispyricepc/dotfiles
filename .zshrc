@@ -86,7 +86,7 @@ path+=('/home/benjo/.local/bin')
 export PATH
 
 # Aliases
-alias ccat='pygmentize -f terminal256 -P style="monokai" -g'
+alias cat='bat'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

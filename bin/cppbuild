@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -f CMakeLists.txt ]; then
+    if [ ! -d build ]; then
+        mkdir {build,debug}
+    fi
+    cd build
+    cmake ../
+    make
+else
+    echo "The current directory does not contain a CMakeLists.txt file"
+fi
