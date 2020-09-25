@@ -86,6 +86,7 @@ source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 path+=('/home/benjo/.local/bin')
+path+=('/home/benjo/bin')
 export PATH
 
 # Aliases
