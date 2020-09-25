@@ -1,0 +1,27 @@
+#!/bin/bash
+
+listpath() {
+    echo $PATH | tr ":" "\n"
+}
+
+flag=$1
+case $flag in
+    -a | --all )
+        listpath
+        exit 0
+    ;;
+    -w | --win | --windows )
+        listpath | grep /mnt/c
+        exit 0
+    ;;
+    -l | --linux | '' )
+        listpath | grep -v /mnt/c
+        exit 0
+    ;;
+    * )
+        echo Invalid argument: \'$flag\'
+        exit 1
+    ;;
+esac
+
+listpath | grep -v /mnt/c
