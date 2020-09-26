@@ -84,8 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # Plugins
 source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Bat settings
+# Exports
+export PAGER='bat --paging=always'
 export BAT_THEME="Dracula"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 path+=('/home/benjo/.local/bin')
@@ -93,6 +95,7 @@ path+=('/home/benjo/bin')
 export PATH
 
 # Aliases
+alias less='bat --paging=always'
 alias cat='bat --pager=never'
 alias lsl='ls -l'
 alias lsla='ls -l -a'
