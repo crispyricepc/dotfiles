@@ -1,14 +1,22 @@
+#!/usr/bin/python3
+
 import errno
 import subprocess
 import sys
+import os
+
+home = os.environ.get("HOME")
 
 def run_cmd(cmd: str) -> int:
     print(f"Running $ {cmd}")
     return subprocess.call(cmd.split(' '))
 
 def install_apt_packages():
-    print("Installing zsh and bat")
-    ret = run_cmd("apt install zsh bat")
+    print("Installing bat using dpkg")
+    run_cmd(f"sudo dpkg -i {home}/dotfiles/debs/bat_0.15.4_amd64.deb")
+
+    print("Installing zsh from apt")
+    ret = run_cmd("sudo apt install zsh")
     if ret != 0:
         print("Unable to install packages! Possibly due to lack of root/sudo.")
         response = input("Setup everything that doesn't require sudo? (y/n): ").lower()
@@ -19,14 +27,14 @@ def install_apt_packages():
 
 def symlink():
     flinks = [
-        "ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc",
-        "ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh",
-        "ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig"
+        f"ln -s {home}/dotfiles/.zshrc {home}/.zshrc",
+        f"ln -s {home}/dotfiles/.p10k.zsh {home}/.p10k.zsh",
+        f"ln -s {home}/dotfiles/.gitconfig {home}/.gitconfig"
     ]
 
     dlinks = [
-        "ln -s $HOME/dotfiles/bin $HOME/bin",
-        "ln -s $HOME/dotfiles/.zsh-plugins $HOME/.zsh-plugins"
+        f"ln -s {home}/dotfiles/bin {home}/bin",
+        f"ln -s {home}/dotfiles/.zsh-plugins {home}/.zsh-plugins"
     ]
 
     print("Creating symlinks")
