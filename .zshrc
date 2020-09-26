@@ -25,7 +25,7 @@ compinit
 
 # Exports
 # If the bat (cat alternative) command is found
-if [ command -v COMMAND &> /dev/null ]
+if command -v bat &> /dev/null
 then
     export PAGER='bat --paging=always'
     export BAT_THEME="Dracula"
