@@ -55,6 +55,7 @@ def change_shell():
     print("\n")
 
 print("Ben Mitchell's dotfiles setup! v1.0")
+run_cmd("git submodule update --init")
 install_apt_packages()
 symlink()
 change_shell()
