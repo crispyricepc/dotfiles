@@ -1,3 +1,8 @@
-[user]
-	name = Ben Mitchell
-	email = bjosephmitchell@gmail.com
+[includeIf "gitdir:~/dev/uni/"]
+	path = ~/dev/uni/.gitconfig_include
+
+[includeIf "gitdir:~/dev/personal/"]
+	path = ~/dev/personal/.gitconfig_include
+
+[core]
+	autocrlf = true
