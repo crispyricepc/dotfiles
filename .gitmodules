@@ -3,4 +3,4 @@
 	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule ".zsh-plugins/themes/powerlevel10k"]
 	path = .zsh-plugins/themes/powerlevel10k
-	url = git@github.com:romkatv/powerlevel10k.git
+	url = https://github.com/romkatv/powerlevel10k.git
