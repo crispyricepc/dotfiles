@@ -32,6 +32,7 @@ then
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 path+=('/home/benjo/.local/bin')
+path+=('/home/benjo/.local/applications/Qt/Tools/QtCreator/bin')
 path+=('/home/benjo/bin')
 export PATH
 
@@ -40,12 +41,28 @@ alias less='bat --paging=always'
 alias cat='bat --pager=never'
 alias lsl='ls -l'
 alias lsla='ls -l -a'
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
 # Plugins
-source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh-plugins/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 ### End User Configuration
 
 # ![POWERLEVEL10K] To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
+then
+  startx >/dev/null 2>/dev/null
+fi
