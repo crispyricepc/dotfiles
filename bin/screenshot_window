@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+eval $(xdotool getmouselocation --shell)
+
+xrandr | grep -Po '\d+x\d+.\d+.\d+' | while read monitor
+do
+  IFS=x+ read w h x y <<< $monitor
+  (( x <= X && X <= x+w && y <= Y && Y <= y+h )) && \
+  maim -gu $monitor | exec xclip -selection clipboard -t image/png -i
+done
