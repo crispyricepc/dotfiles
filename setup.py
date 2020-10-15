@@ -29,7 +29,9 @@ def symlink():
     flinks = [
         f"ln -s {home}/dotfiles/.zshrc {home}/.zshrc",
         f"ln -s {home}/dotfiles/.p10k.zsh {home}/.p10k.zsh",
-        f"ln -s {home}/dotfiles/.gitconfig {home}/.gitconfig"
+        f"ln -s {home}/dotfiles/.gitconfig {home}/.gitconfig",
+        f"ln -s {home}/dotfiles/dev/uni/.gitconfig_include {home}/dev/uni/.gitconfig_include",
+        f"ln -s {home}/dotfiles/dev/personal/.gitconfig_include {home}/dev/personal/.gitconfig_include"
     ]
 
     dlinks = [
