@@ -16,7 +16,6 @@ def update_submodules():
             file=sys.stderr)
         if (input().lower() == "n"):
             sys.exit(1)
-    print()
 
 
 def refresh_symlinks():
@@ -75,6 +74,7 @@ def check_for_packages():
 
 print("Ben's dotfiles! MK II\n")
 update_submodules()
+print()
 refresh_symlinks()
 print()
 check_for_packages()
