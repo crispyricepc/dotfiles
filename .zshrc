@@ -1,9 +1,5 @@
-# ![POWERLEVEL10K] Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Source zinit
+source ~/.zinit/bin/zinit.zsh
 
 # ![ZSH] Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -19,9 +15,6 @@ compinit
 # ![ZSH] End of lines added by compinstall
 
 ### Begin User Configuration
-
-# Vars
-# POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # Exports
 # If the bat (cat alternative) command is found
@@ -54,13 +47,10 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Plugins
-# source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh-plugins/themes/powerlevel10k/powerlevel10k.zsh-theme
+# Powerlevel10k
+zplugin ice depth=1; zplugin light romkatv/powerlevel10k
 
 ### End User Configuration
-
-# ![POWERLEVEL10K] To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
 then
