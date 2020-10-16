@@ -1,2 +1,9 @@
 # Annoying ide related stuff
 .vscode
+
+# zinit
+.zinit/completions
+.zinit/plugins
+.zinit/polaris
+.zinit/services
+.zinit/snippets
