@@ -7,3 +7,6 @@
 .zinit/polaris
 .zinit/services
 .zinit/snippets
+
+# setup
+setup/symlinks.yaml
