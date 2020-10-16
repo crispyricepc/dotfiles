@@ -1,6 +1,0 @@
-[includeIf "gitdir:~/dev/uni/"]
-	path = ~/dev/uni/.gitconfig_include
-
-[includeIf "gitdir:~/dev/personal/"]
-	path = ~/dev/personal/.gitconfig_include
-
