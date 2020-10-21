@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Source zinit
 source ~/.zinit/bin/zinit.zsh
 
@@ -53,18 +46,18 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# Plugin configuration
+PURE_PROMPT_SYMBOL='$'
+
 # Plugins
-# Powerlevel10k
-zplugin ice depth=1; zplugin light romkatv/powerlevel10k
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+zinit light sindresorhus/pure
 zinit for \
     light-mode  zsh-users/zsh-autosuggestions \
     light-mode  zdharma/fast-syntax-highlighting \
                 zdharma/history-search-multi-word \
 
 ### End User Configuration
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Startup
 if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]

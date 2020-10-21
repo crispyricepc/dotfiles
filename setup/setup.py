@@ -40,8 +40,6 @@ def refresh_symlinks():
         ".zshrc",
         # A zsh plugin manager
         ".zinit",
-        # A very fast and customizable zsh theme
-        ".p10k.zsh",
         # My custom fast scripts
         "bin"
     ]
