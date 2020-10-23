@@ -6,5 +6,7 @@
   ```
   $ git clone https://github.com/CRISPYricePC/dotfiles.git
   $ cd dotfiles
-  $ ./setup.py
+  $ ./setup.sh
   ```
+
+If you need to quickly update, you can run `./setup.sh` again and everything will be updated automagically
