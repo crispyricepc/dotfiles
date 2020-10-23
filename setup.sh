@@ -47,6 +47,6 @@ done < setup/symlinks_needed
 echo "Links created!"
 
 echo -e "\nRunning chsh. Password is likely required (note: this is not asking for sudo and this script does not get to see your password)"
-chsh -s $(which zsh)
+chsh -s $(command -v zsh)
 
 echo "Thank you for installing my dotfiles!"
