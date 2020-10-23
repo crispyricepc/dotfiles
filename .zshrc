@@ -59,14 +59,17 @@ zinit for \
 
 ### End User Configuration
 
-# Startup
-if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
-then
-  startx >/dev/null 2>/dev/null
-elif [[ $(tput cols) -gt 125 ]] && [[ $(tput lines) -gt 40 ]]
+# Fetch
+if [[ $(tput cols) -gt 125 ]] && [[ $(tput lines) -gt 40 ]]
 then
     neofetch
 elif [[ $(tput cols) -gt 75 ]] && [[ $(tput lines) -gt 25 ]]
 then
     pfetch
+fi
+
+# Startup
+if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
+then
+  startx >/dev/null 2>/dev/null
 fi
