@@ -30,14 +30,14 @@ path+=('/home/benjo/bin')
 export PATH
 
 # Aliases
+alias exa='exa --git-ignore'
 alias less='bat --paging=always'
 alias cat='bat --pager=never'
-alias lsl='ls -l'
-alias lsla='ls -l -a'
+alias ls='exa'
+alias tree='exa --tree --git-ignore'
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
