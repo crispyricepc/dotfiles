@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if ! command -v zsh > /dev/null || ! command -v bat > /dev/null
+if ! command -v zsh > /dev/null || ! command -v bat > /dev/null || ! command -v exa > /dev/null
 then
-    echo -e "The programs 'bat' and 'zsh' are required for these dotfiles to work properly.
+    echo -e "The programs 'bat', 'zsh', and 'exa' are required for these dotfiles to work properly.
 Everything will install correctly without the program(s) installed, but you won't be able to use some of the features until they are.\n"
     read -p "Continue the installation? [Y/n]: " -n 1 -r
     if [[ ! $REPLY =~ ^[Yy]$ ]];
