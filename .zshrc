@@ -33,7 +33,7 @@ export PATH
 alias exa='exa --git-ignore'
 alias less='bat --paging=always'
 alias cat='bat --pager=never'
-alias ls='exa'
+alias ls='exa -h'
 alias tree='exa --tree --git-ignore'
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
