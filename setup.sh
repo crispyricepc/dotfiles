@@ -81,5 +81,6 @@ if [[ $(command -v zsh) != $SHELL ]]
 then
     echo -e "\nRunning chsh. Password is likely required (note: this is not asking for sudo and this script does not get to see your password)"
     chsh -s $(command -v zsh)
+    echo "Your changes will take effect when you open a new terminal"
 fi
 echo "Thank you for installing my dotfiles!"
