@@ -16,26 +16,28 @@ compinit
 
 ### Begin User Configuration
 
-# Exports
+# Aliases and Exports
 # If the bat (cat alternative) command is found
 if command -v bat &> /dev/null
 then
     export PAGER='bat --paging=always'
     export BAT_THEME="Dracula"
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+    alias less='bat --paging=always'
+    alias cat='bat --pager=never'
 fi
-path+=('/home/benjo/.local/bin')
-path+=('/home/benjo/.local/applications/Qt/Tools/QtCreator/bin')
 path+=('/home/benjo/bin')
 export PATH
 
-# Aliases
-alias exa='exa --git-ignore'
-alias less='bat --paging=always'
-alias cat='bat --pager=never'
-alias ls='exa -h'
-alias tree='exa --tree --git-ignore'
-# enable color support of ls and also add handy aliases
+# If the exa (ls alternative) command is found
+if command -v exa &> /dev/null
+then
+    alias exa='exa --git-ignore'
+    alias ls='exa -h'
+    alias tree='exa --tree --git-ignore'
+fi
+
+# Copied straight from .bashrc
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias dir='dir --color=auto'

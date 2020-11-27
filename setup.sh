@@ -1,24 +1,54 @@
 #!/usr/bin/env bash
 
-if ! command -v zsh > /dev/null || ! command -v bat > /dev/null || ! command -v exa > /dev/null
-then
-    echo -e "The programs 'bat', 'zsh', and 'exa' are required for these dotfiles to work properly.
-Everything will install correctly without the program(s) installed, but you won't be able to use some of the features until they are.\n"
-    read -p "Continue the installation? [Y/n]: " -n 1 -r
-    if [[ ! $REPLY =~ ^[Yy]$ ]];
+deps_satisfied=true
+
+while read dep
+do
+    printf "Searching for $dep... "
+    if ! command -v $dep > /dev/null
     then
-        exit 1
+        printf "\e[31mNOT FOUND\e[0m\n"
+        deps_satisfied=false
+    else
+        printf "\e[32mFOUND\e[0m\n"
     fi
-    echo -e "Continuing...\n"
+done < setup/deps
+
+opt_deps_satisfied=true
+
+while read opt_dep
+do
+    printf "Searching for $opt_dep (optional)... "
+    if ! command -v $opt_dep > /dev/null
+    then
+        printf "\e[33mNOT FOUND\e[0m\n"
+        opt_deps_satisfied=false
+    else
+        printf "\e[32mFOUND\e[0m\n"
+    fi
+done < setup/deps_opt
+
+if [ "$deps_satisfied" = false ]
+then
+    echo -e "You must have the correct dependencies installed"
+    exit 1
 fi
 
-echo "Fetching and rebasing"
-if ! (git fetch && git rebase origin master)
+if [ "$opt_deps_satisfied" = false ]
 then
+    echo -e "Some optional dependencies weren't found, install them to unlock all functionality\n"
+    read -n 1 -s -r -p "Setup will continue after pressing a key..."
+    echo ""
+fi
+
+printf "Fetching and rebasing... "
+if ! (git fetch > /dev/null 2>&1 && git rebase origin master > /dev/null 2>&1)
+then
+    printf "\e[31mFAILED\e[0m\n"
     echo "Rebase failed, is your local repository clean?"
     exit 1
 fi
-echo "Rebase succeeded"
+printf "\e[32mDONE\e[0m\n"
 
 echo "Updating submodules..."
 if ! git submodule update --init --recursive
