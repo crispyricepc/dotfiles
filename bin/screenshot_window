@@ -1,3 +1,6 @@
 #!/bin/sh
 
-maim -i $(xdotool getactivewindow) -u | xclip -selection clipboard -t image/png
+IMG=~/pictures/screenshots/$(date "+%s").png
+
+maim -i $(xdotool getactivewindow) -u $IMG &&\
+	xclip -selection clipboard -t image/png -i $IMG

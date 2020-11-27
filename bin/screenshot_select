@@ -1,3 +1,6 @@
 #!/bin/sh
 
-maim -su | xclip -selection clipboard -t image/png
+IMG=~/pictures/screenshots/$(date "+%s").png
+
+maim -su $IMG &&\
+	xclip -selection clipboard -t image/png -i $IMG
