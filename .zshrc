@@ -47,15 +47,15 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Plugin configuration
-PURE_PROMPT_SYMBOL='$'
-
-# Plugins
-zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
-zinit light sindresorhus/pure
 zinit for \
     light-mode  zsh-users/zsh-autosuggestions \
     light-mode  zdharma/fast-syntax-highlighting \
                 zdharma/history-search-multi-word \
+
+eval $(starship init zsh)
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
 
 ### End User Configuration
 
@@ -67,3 +67,5 @@ if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
 then
   startx >/dev/null 2>/dev/null
 fi
+
+export PATH="$HOME/.poetry/bin:$PATH"
