@@ -50,13 +50,14 @@ then
 fi
 printf "\e[32mDONE\e[0m\n"
 
-echo "Updating submodules..."
+printf "Updating submodules... "
 if ! git submodule update --init --recursive
 then
+    printf "\e[31mFAILED\e[0m\n"
     echo "Failed to update submodules! Try doing a fresh clone of this repository. If it still doesn't work, submit an issue"
     exit 1
 fi
-echo "Submodules updated!"
+printf "\e[32mDONE\e[0m\n"
 
 echo "Removing old symlinks..."
 while read oldlnk
@@ -76,7 +77,9 @@ do
 done < setup/symlinks_needed
 echo "Links created!"
 
-echo -e "\nRunning chsh. Password is likely required (note: this is not asking for sudo and this script does not get to see your password)"
-chsh -s $(command -v zsh)
-
+if [[ $(command -v zsh) != $SHELL ]]
+then
+    echo -e "\nRunning chsh. Password is likely required (note: this is not asking for sudo and this script does not get to see your password)"
+    chsh -s $(command -v zsh)
+fi
 echo "Thank you for installing my dotfiles!"
