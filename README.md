@@ -1,5 +1,9 @@
 # My Dotfiles!
 
+Super simple *TERMINAL ONLY* dotfiles that don't require you to download too many dependencies.
+
+The idea of these dotfiles is to get a terminal (say WSL) user to be up and running with a tasteful rice in seconds, with as many or as few optional dependencies as they want.
+
 ## Quick Install
 
 Run the following command:
