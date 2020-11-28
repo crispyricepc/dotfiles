@@ -65,7 +65,7 @@ export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
 if command -v pfetch &> /dev/null
 then
     pfetch
-else
+fi
 
 # Startup
 if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
