@@ -20,10 +20,10 @@ compinit
 # If the bat (cat alternative) command is found
 if command -v bat &> /dev/null
 then
-    export PAGER='bat --paging=always'
+    # export PAGER='bat --paging=always'
     export BAT_THEME="Dracula"
-    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-    alias less='bat --paging=always'
+    # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+    # alias less='bat --paging=always'
     alias cat='bat --pager=never'
 fi
 path+=('/home/benjo/bin')
@@ -36,6 +36,8 @@ then
     alias ls='exa -h'
     alias tree='exa --tree --git-ignore'
 fi
+
+alias todo='todo.sh'
 
 # Copied straight from .bashrc
 if [ -x /usr/bin/dircolors ]; then
