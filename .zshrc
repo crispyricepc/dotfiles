@@ -63,8 +63,11 @@ export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
 
 ### End User Configuration
 
-# Fetch
-pfetch
+# Fetch if a fetch is installed
+if command -v pfetch &> /dev/null
+then
+    pfetch
+fi
 
 # Startup
 if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
