@@ -77,10 +77,10 @@ do
 done < setup/symlinks_needed
 echo "Links created!"
 
-if [[ $(command -v zsh) != $SHELL ]]
+if [[ $(command -v fish) != $SHELL ]]
 then
     echo -e "\nRunning chsh. Password is likely required (note: this is not asking for sudo and this script does not get to see your password)"
-    chsh -s $(command -v zsh)
+    chsh -s $(command -v fish)
     echo "Your changes will take effect when you open a new terminal"
 fi
 echo "Thank you for installing my dotfiles!"
