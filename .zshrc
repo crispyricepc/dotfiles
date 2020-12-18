@@ -1,5 +1,6 @@
 # Source zinit
 source ~/.zinit/bin/zinit.zsh
+fpath+=~/.zfunc
 
 # ![ZSH] Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -27,6 +28,7 @@ then
     alias cat='bat --pager=never'
 fi
 path+=('/home/benjo/bin')
+path+=('/home/benjo/.cargo/bin')
 export PATH
 
 # If the exa (ls alternative) command is found
@@ -58,16 +60,16 @@ zinit for \
 
 eval $(starship init zsh)
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
-
 ### End User Configuration
 
 # Fetch if a fetch is installed
-if command -v pfetch &> /dev/null
+if command -v pfetch &> /dev/null && [ "$TERM_PROGRAM" != "vscode" ]
 then
     pfetch
 fi
+
+export FrameworkPathOverride=/lib/mono/4.5
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # Startup
 if [[ -z $display ]] && [[ $(tty) = /dev/tty1 ]]
@@ -75,4 +77,3 @@ then
   startx >/dev/null 2>/dev/null
 fi
 
-export PATH="$HOME/.poetry/bin:$PATH"
