@@ -1,3 +1,4 @@
 .config/fish
 .config/bat
+.config/starship.toml
 bin
