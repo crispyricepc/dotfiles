@@ -9,7 +9,7 @@ end
 function __fish_default_command_not_found_handler
     printf "Unknown command: %s\n" (string escape -- $argv[1]) >&2
     printf "Packages that can be installed to supplement %s:\n" (string escape -- $argv[1]) >&2
-    pacman -F $argv[1] >&2
+    pacman -F $argv[1] >&2 # Change this line if you don't use pacman
 end
 
 # Set path bins for cargo and poetry
