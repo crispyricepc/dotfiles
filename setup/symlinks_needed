@@ -1,4 +1,5 @@
 .config/fish
 .config/bat
 .config/starship.toml
+.config/nvim/init.vim
 bin
