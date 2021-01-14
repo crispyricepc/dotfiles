@@ -2,5 +2,5 @@
 
 IMG=~/pictures/screenshots/$(date "+%s").png
 
-maim -i $(xdotool getactivewindow) -u $IMG &&\
+maim -i $(xdotool getactivewindow) $IMG &&\
 	xclip -selection clipboard -t image/png -i $IMG
