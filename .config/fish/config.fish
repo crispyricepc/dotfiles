@@ -13,7 +13,7 @@ function __fish_default_command_not_found_handler
 end
 
 # Set path bins for cargo and poetry
-set -x PATH $HOME/.cargo/bin $HOME/.poetry/bin $HOME/bin $HOME/.local/bin $PATH
+set -x PATH $HOME/.cargo/bin $HOME/.poetry/bin $HOME/.local/bin $HOME/bin $PATH
 
 # Disable fish greeting
 set fish_greeting
