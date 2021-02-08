@@ -1,10 +1,3 @@
-# Start X at login
-if status is-login
-    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        startx &> /dev/null
-    end
-end
-
 # Create the default command_not_found handler
 function __fish_default_command_not_found_handler
     printf "Unknown command: %s\n" (string escape -- $argv[1]) >&2
