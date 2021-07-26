@@ -19,6 +19,7 @@ DEPENDENCIES=(
     "feh"
     "exa"
     "bat"
+    "rsync"
 )
 
 FOUND=0
