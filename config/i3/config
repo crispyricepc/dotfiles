@@ -33,6 +33,11 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# take a screenshot
+bindsym Print exec --no-startup-id $HOME/.config/i3/screenshot_display.sh
+bindsym Shift+Print exec --no-startup-id $HOME/.config/i3/screenshot_select.sh
+bindsym Ctrl+Print exec --no-startup-id $HOME/.config/i3/screenshot_window.sh
+
 # kill focused window
 bindsym $mod+w kill
 

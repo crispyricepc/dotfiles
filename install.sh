@@ -11,6 +11,7 @@ echo "Checking dependencies..."
 
 EXE_EXISTS="command -v"
 DIR_EXISTS="ls -dh"
+FONT_EXISTS="fc-list"
 
 DEPENDENCIES=(
     "$EXE_EXISTS zsh"
@@ -27,7 +28,11 @@ DEPENDENCIES=(
     "$EXE_EXISTS konsole"
     "$EXE_EXISTS dolphin"
     "$EXE_EXISTS dex"
+    "$EXE_EXISTS maim"
+    "$EXE_EXISTS xclip"
+    "$EXE_EXISTS xdotool"
     "$DIR_EXISTS /usr/share/icons/Papirus"
+    "$FONT_EXISTS 'FiraCode Nerd Font:style=Regular'"
 )
 
 FOUND=0
