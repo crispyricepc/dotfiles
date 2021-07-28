@@ -9,24 +9,29 @@ BLUE="\033[0;34m"
 
 echo "Checking dependencies..."
 
+EXE_EXISTS="command -v"
+DIR_EXISTS="ls -dh"
+
 DEPENDENCIES=(
-    "zsh"
-    "i3"
-    "polybar"
-    "rofi"
-    "picom"
-    "lxqt-policykit-agent"
-    "feh"
-    "exa"
-    "bat"
-    "rsync"
+    "$EXE_EXISTS zsh"
+    "$EXE_EXISTS i3"
+    "$EXE_EXISTS polybar"
+    "$EXE_EXISTS rofi"
+    "$EXE_EXISTS picom"
+    "$EXE_EXISTS lxqt-policykit-agent"
+    "$EXE_EXISTS feh"
+    "$EXE_EXISTS exa"
+    "$EXE_EXISTS bat"
+    "$EXE_EXISTS rsync"
+    "$EXE_EXISTS dunst"
+    "$DIR_EXISTS /usr/share/icons/Papirus"
 )
 
 FOUND=0
 for DEP in "${DEPENDENCIES[@]}"
 do
     printf "$BLUE$DEP$RESET: "
-    ! command -v $DEP && printf "${RED}not found$RESET\n" && FOUND=1
+    ! $DEP 2>/dev/null && printf "${RED}failed$RESET\n" && FOUND=1
 done
 
 [[ FOUND -ne 0 ]] && exit $FOUND
