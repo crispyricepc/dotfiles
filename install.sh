@@ -24,6 +24,8 @@ DEPENDENCIES=(
     "$EXE_EXISTS bat"
     "$EXE_EXISTS rsync"
     "$EXE_EXISTS dunst"
+    "$EXE_EXISTS konsole"
+    "$EXE_EXISTS dolphin"
     "$DIR_EXISTS /usr/share/icons/Papirus"
 )
 

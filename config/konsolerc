@@ -1,0 +1,25 @@
+DP-0 Height 2560x1440=637
+DP-0 Width 2560x1440=1185
+DP-0 XPosition 2560x1440=559
+DP-0 YPosition 2560x1440=484
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABKEAAAJPAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIBAAAB+/////8AAAAAAAAAAA==
+StatusBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=Custom.profile
+
+[KonsoleWindow]
+AllowMenuAccelerators=true
+SaveGeometryOnExit=false
+ShowMenuBarByDefault=false
+
+[MainWindow]
+DP-0 Window-Maximized 2560x1440=true
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAACfwAAAWMAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIAAAAB6/////8AAAAAAAAAAA==
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+CloseAllTabs=true
