@@ -26,6 +26,7 @@ DEPENDENCIES=(
     "$EXE_EXISTS dunst"
     "$EXE_EXISTS konsole"
     "$EXE_EXISTS dolphin"
+    "$EXE_EXISTS dex"
     "$DIR_EXISTS /usr/share/icons/Papirus"
 )
 
