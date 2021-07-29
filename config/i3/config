@@ -18,11 +18,10 @@ exec --no-startup-id $HOME/.config/polybar/launch_polybar.sh
 exec --no-startup-id dex -a
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 default_border pixel 1
 default_floating_border pixel 1 
@@ -34,9 +33,9 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # take a screenshot
-bindsym Print exec --no-startup-id $HOME/.config/i3/screenshot_display.sh
+bindsym Print       exec --no-startup-id $HOME/.config/i3/screenshot_display.sh
 bindsym Shift+Print exec --no-startup-id $HOME/.config/i3/screenshot_select.sh
-bindsym Ctrl+Print exec --no-startup-id $HOME/.config/i3/screenshot_window.sh
+bindsym Ctrl+Print  exec --no-startup-id $HOME/.config/i3/screenshot_window.sh
 
 # kill focused window
 bindsym $mod+w kill
@@ -69,15 +68,15 @@ bindsym $mod+Shift+space floating toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
 set $ws10 "10"
 
 # switch to workspace
@@ -103,6 +102,12 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+assign [class="code"]          $ws1
+assign [class="Google-chrome"] $ws2
+assign [class="firefox"]       $ws2
+assign [class="Steam"]         $ws3
+assign [class="discord"]       $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
