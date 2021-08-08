@@ -29,6 +29,9 @@ default_floating_border pixel 1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Always float for specific window classes
+for_window [class="Sxiv"] floating enable
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -40,7 +43,7 @@ bindsym Ctrl+Print  exec --no-startup-id $HOME/.config/i3/screenshot_window.sh
 # kill focused window
 bindsym $mod+w kill
 
-bindsym $mod+space exec "rofi -modi drun,run -show drun"
+bindsym $mod+space exec "rofi -combi-modi drun,ssh,run -show combi"
 
 # change focus
 bindsym $mod+Left focus left
