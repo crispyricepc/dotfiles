@@ -6,15 +6,15 @@
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 
 [colors]
-background          = #ed282828
-background-opaque   = #282828
-background-alt      = #282828
-foreground          = #EBDBB2
-foreground-alt      = #EBDBB2
-primary             = #98971A
-secondary           = #458588
-alert               = #CC241D
-alert-foreground    = #EBDBB2
+background          = #ed22272e
+background-opaque   = #22272e
+background-alt      = #adbac7
+foreground          = #adbac7
+foreground-alt      = #22272e
+primary             = #57ab5a
+secondary           = #539bf5
+alert               = #f47067
+alert-foreground    = #adbac7
 
 [bar/mybar]
 monitor             = ${env:MONITOR:}
@@ -36,7 +36,7 @@ padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
-font-0              = "mono-nerdfont:style=Regular:size=10"
+font-0              = "Carlito Nerd Font:style=Regular:size=11"
 modules-left        = i3 xwindow
 modules-center      = 
 modules-right       = date cpu pulseaudio battery powermenu
