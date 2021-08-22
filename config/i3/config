@@ -21,6 +21,14 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# Use playerctl to control media
+bindsym XF86AudioPlay  exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext  exec --no-startup-id playerctl next
+bindsym XF86AudioPrev  exec --no-startup-id playerctl previous 
+# take a screenshot
+bindsym Print       exec --no-startup-id $HOME/.config/i3/screenshot_display.sh
+bindsym Shift+Print exec --no-startup-id $HOME/.config/i3/screenshot_select.sh
+bindsym Ctrl+Print  exec --no-startup-id $HOME/.config/i3/screenshot_window.sh
 
 default_border pixel 1
 default_floating_border pixel 1 
@@ -33,11 +41,6 @@ for_window [class="Sxiv"] floating enable
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-
-# take a screenshot
-bindsym Print       exec --no-startup-id $HOME/.config/i3/screenshot_display.sh
-bindsym Shift+Print exec --no-startup-id $HOME/.config/i3/screenshot_select.sh
-bindsym Ctrl+Print  exec --no-startup-id $HOME/.config/i3/screenshot_window.sh
 
 # kill focused window
 bindsym $mod+w kill
