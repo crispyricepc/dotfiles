@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-exec --no-startup-id picom
+# exec --no-startup-id picom
 exec --no-startup-id $HOME/.config/polybar/launch_polybar.sh
 
 # Autostart
@@ -82,6 +82,13 @@ set $ws8  "8"
 set $ws9  "9"
 set $ws10 "10"
 
+workspace $ws1 output HDMI-0
+workspace $ws2 output HDMI-0
+workspace $ws3 output HDMI-0
+workspace $ws4 output DP-0
+workspace $ws5 output DP-0
+workspace $ws6 output DP-0
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -106,11 +113,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-assign [class="code"]          $ws1
-assign [class="Google-chrome"] $ws2
-assign [class="firefox"]       $ws2
-assign [class="Steam"]         $ws3
-assign [class="discord"]       $ws4
+assign [class="Code"]               $ws4
+assign [class="Steam"]              $ws6
+assign [class="discord"]            $ws1
+assign [class="spotify"]            $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

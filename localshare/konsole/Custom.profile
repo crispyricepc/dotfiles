@@ -1,8 +1,8 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=true
-ColorScheme=Gruvbox
-Font=FiraCode Nerd Font,9,-1,5,50,0,0,0,0,0
+ColorScheme=GitHub Dark Dimmed
+Font=Monospace,9,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=false
 
 [General]
