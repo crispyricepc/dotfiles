@@ -51,7 +51,7 @@ format                      = <label-state> <label-mode>
 name-sort                   = true
 wrapping-scroll             = false
 pin-workspaces              = true
-label-mode-padding          = 2
+label-mode-padding          = 4
 label-mode-foreground       = ${colors.foreground-alt}
 label-mode-background       = ${colors.primary}
 ; focused = Active workspace on focused monitor
@@ -59,26 +59,26 @@ label-focused               = %name%
 label-focused-foreground    = ${colors.foreground-alt}
 label-focused-background    = ${colors.secondary}
 label-focused-overline      = ${colors.primary}
-label-focused-padding       = 2
+label-focused-padding       = ${settings.font-padding}
 ; unfocused = Inactive workspace on any monitor
 label-unfocused             = %name%
-label-unfocused-padding     = 2
+label-unfocused-padding     = ${settings.font-padding}
 label-unfocused-background  = ${colors.background-alt}
 label-unfocused-foreground  = ${colors.foreground-alt}
 ; visible = Active workspace on unfocused monitor
 label-visible               = %name%
 label-visible-background    = ${self.label-focused-background}
 label-visible-overline      = ${self.label-focused-overline}
-label-visible-padding       = ${self.label-focused-padding}
+label-visible-padding       = ${settings.font-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent                = %name%
 label-urgent-background     = ${colors.alert}
-label-urgent-padding        = 2
+label-urgent-padding        = ${settings.font-padding}
 
 [module/xwindow]
 type                = internal/xwindow
 label               = %title:0:75:%
-label-padding-left  = 1
+label-padding-left  = ${settings.font-padding}
 
 [module/date]
 type                        = internal/date
@@ -88,7 +88,7 @@ time                        = %H:%M:%S
 format-prefix-foreground    = ${colors.foreground-alt}
 format-overline             = ${colors.primary}
 label                       = %date% %time%
-label-padding               = 2
+label-padding               = ${settings.font-padding}
 
 [module/cpu]
 type                        = internal/cpu
@@ -97,7 +97,7 @@ format-prefix               = " "
 format-prefix-foreground    = ${colors.foreground-alt}
 format-background           = ${colors.secondary}
 format-foreground           = ${colors.foreground-alt}
-format-padding              = 2
+format-padding              = ${settings.font-padding}
 label                       = %percentage:2%%
 click                       = gotop
 
@@ -107,19 +107,18 @@ format-volume               = <ramp-volume><label-volume>
 label-volume                = %percentage%%
 label-volume-foreground     = ${colors.foreground-alt}
 label-volume-background     = ${colors.primary}
-label-volume-padding-right  = 2
-label-volume-padding-left   = 1
+label-volume-padding-right  = ${settings.font-padding}
 label-volume-margin-left    = 0
 label-muted                 = 婢 muted
 label-muted-foreground      = ${colors.foreground-alt}
 label-muted-background      = ${colors.primary}
-label-muted-padding         = 2
-ramp-volume-0               = 
-ramp-volume-1               = 
-ramp-volume-2               = 墳
+label-muted-padding         = ${settings.font-padding}
+ramp-volume-0               = " "
+ramp-volume-1               = " "
+ramp-volume-2               = "墳 "
 ramp-volume-foreground      = ${colors.foreground-alt}
 ramp-volume-background      = ${colors.primary}
-ramp-volume-padding-left    = 2
+ramp-volume-padding-left    = ${settings.font-padding}
 
 [module/battery]
 type                            = internal/battery
@@ -152,18 +151,18 @@ ramp-capacity-6                 = ""
 ramp-capacity-7                 = ""
 ramp-capacity-8                 = ""
 ramp-capacity-9                 = ""
-label-charging-padding-right    = 2
-label-discharging-padding-right = 2
-label-full-padding-right        = 2
-animation-charging-padding-left = 2
-ramp-capacity-padding-left      = 2
+label-charging-padding-right    = ${settings.font-padding}
+label-discharging-padding-right = ${settings.font-padding}
+label-full-padding-right        = ${settings.font-padding}
+animation-charging-padding-left = ${settings.font-padding}
+ramp-capacity-padding-left      = ${settings.font-padding}
 
 [module/powermenu]
 type                        = custom/menu
 expand-right                = true
 format-spacing              = 1
 format-background           = ${colors.background-alert}
-format-padding = 2
+format-padding              = ${settings.font-padding}
 
 label-open                  =  Power
 label-open-foreground       = ${colors.alert-foreground}
@@ -196,6 +195,7 @@ menu-4-0-exec               = i3-msg exit
 
 [settings]
 screenchange-reload = true
+font-padding        = 4
 
 [global/wm]
 margin-top      = 5
