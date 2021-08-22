@@ -39,7 +39,7 @@ module-margin-right = 0
 font-0              = "mono-nerdfont:style=Regular:size=10"
 modules-left        = i3 xwindow
 modules-center      = 
-modules-right       = date cpu pulseaudio powermenu
+modules-right       = date cpu pulseaudio battery powermenu
 wm-restack          = i3 
 cursor-click        = pointer
 cursor-scroll       = ns-resize
@@ -120,6 +120,43 @@ ramp-volume-2               = 墳
 ramp-volume-foreground      = ${colors.foreground-alt}
 ramp-volume-background      = ${colors.primary}
 ramp-volume-padding-left    = 2
+
+[module/battery]
+type                            = internal/battery
+full-at                         = 100
+format-charging                 = <animation-charging> <label-charging>
+format-discharging              = <ramp-capacity> <label-discharging>
+format-full                     = <ramp-capacity> <label-full>
+format-discharging-background   = ${colors.alert}
+format-charging-background      = ${colors.secondary}
+format-full-background          = ${colors.primary}
+label                           = "%percentage%%"
+battery                         = BAT0
+adapter                         = AC
+poll-interval                   = 10
+animation-charging-0            = ""
+animation-charging-1            = ""
+animation-charging-2            = ""
+animation-charging-3            = ""
+animation-charging-4            = ""
+animation-charging-5            = ""
+animation-charging-6            = ""
+animation-charging-framerate    = 500
+ramp-capacity-0                 = ""
+ramp-capacity-1                 = ""
+ramp-capacity-2                 = ""
+ramp-capacity-3                 = ""
+ramp-capacity-4                 = ""
+ramp-capacity-5                 = ""
+ramp-capacity-6                 = ""
+ramp-capacity-7                 = ""
+ramp-capacity-8                 = ""
+ramp-capacity-9                 = ""
+label-charging-padding-right    = 2
+label-discharging-padding-right = 2
+label-full-padding-right        = 2
+animation-charging-padding-left = 2
+ramp-capacity-padding-left      = 2
 
 [module/powermenu]
 type                        = custom/menu
