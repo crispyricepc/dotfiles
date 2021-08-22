@@ -17,38 +17,38 @@ configuration {
 * {
     text-color:  #ffeedd;
     background-color:  rgba(0,0,0,0);
-    dark: #1c1c1c;
+    dark: #22272e;
     // Black
-    black:          #282828;
-    lightblack:     #504945;
+    black:          #545d68;
+    lightblack:     #636e7b;
     //
     // Red
-    red:            #cc241d;
-    lightred:       #fb4934;
+    red:            #f47067;
+    lightred:       #ff938a;
     //
     // Green
-    green:          #98971a;
-    lightgreen:     #b8bb26;
+    green:          #57ab5a;
+    lightgreen:     #6bc46d;
     //
     // Yellow
-    yellow:         #d79921;
-    lightyellow:    #fabd2f;
+    yellow:         #c69026;
+    lightyellow:    #daaa3f;
     //
     // Blue
-    blue:           #458588;
-    lightblue:      #83a598;
+    blue:           #539bf5;
+    lightblue:      #6cb6ff;
     //
     // Magenta
-    magenta:        #b16286;
-    lightmagenta:   #d3869b;
+    magenta:        #b083f0;
+    lightmagenta:   #dcbdfb;
     //
     // Cyan
-    cyan:           #689d6a;
-    lightcyan:      #8ec07c;
+    cyan:           #39c5cf;
+    lightcyan:      #56d4dd;
     //
     // White
-    white:          #a89984;
-    lightwhite:     #ebdbb2;
+    white:          #909dab;
+    lightwhite:     #cdd9e5;
     //
     // Bold, Italic, Underline
     highlight: bold #ebdbb2;
@@ -64,7 +64,7 @@ window {
 
 mode-switcher {
     border: 2px 0px 0px 0px;
-    background-color: @lightblack;
+    background-color: @black;
     padding: 4px;
 }
 button selected {
@@ -72,14 +72,14 @@ button selected {
     text-color: @lightgreen;
 }
 inputbar {
-    background-color: @lightblack;
+    background-color: @black;
     text-color: @lightgreen;
     padding: 1em;
     border: 0px 0px 2px 0px;
 }
 mainbox {
     expand: true;
-    background-color: @black;
+    background-color: @dark;
     spacing: 1em;
 }
 listview {
