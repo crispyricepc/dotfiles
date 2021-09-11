@@ -10,7 +10,7 @@ configuration {
     display-drun:   " ";
     display-ssh:    "祝 ";
     display-run:    " ";
-    font:           "mono-nerdfont 12";
+    font:           "Carlito Nerd Font 14";
     icon-theme:     "Papirus";
 }
 
