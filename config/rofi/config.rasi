@@ -7,11 +7,9 @@
 configuration {
     show-icons:     true;
     display-combi:  "> ";
-    display-drun:   " ";
-    display-ssh:    "祝 ";
-    display-run:    " ";
-    font:           "Carlito Nerd Font 14";
-    icon-theme:     "Papirus";
+    display-drun:   "";
+    display-ssh:    "";
+    font:           "Carlito 14";
 }
 
 * {
