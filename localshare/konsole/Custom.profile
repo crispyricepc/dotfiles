@@ -2,7 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=GitHub Dark Dimmed
-Font=Monospace,9,-1,5,50,0,0,0,0,0
+Font=Monospace,10,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=false
 
 [General]
