@@ -9,7 +9,7 @@ configuration {
     display-combi:  "> ";
     display-drun:   "";
     display-ssh:    "";
-    font:           "Carlito 14";
+    font:           "Carlito 12";
 }
 
 * {
@@ -52,11 +52,11 @@ configuration {
     highlight: bold #ebdbb2;
 }
 window {
-    height:   100%;
+    height:   60%;
     width: 30em;
-    location: west;
-    anchor:   west;
-    border:  0px 2px 0px 0px;
+    border:  1px 1px 1px 1px;
+    border-color: @lightblack;
+    border-radius: 5px;
     text-color: @lightwhite;
 }
 
@@ -88,9 +88,10 @@ listview {
 
 element {
     padding: 1em 1em 1em 1em;
+    border-radius: 5px;
 }
 element-icon {
-    size: 64px;
+    size: 32px;
 }
 element-text {
     expand: true;
