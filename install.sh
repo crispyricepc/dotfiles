@@ -67,7 +67,7 @@ link-inode() {
         printf "${YELLOW}RMLINK ${RESET}"
         rm $DST
     }
-    [ -d $DST ] && {
+    [ -e $DST ] && {
         printf "${YELLOW}BACKUP ${RESET}"
         mv $DST $DST.bak
     }
@@ -82,11 +82,17 @@ required && echo -e "${GREEN}SUCCESS${RESET}: All dependencies found" ||
 read -p "Would you like to begin the installation? [Y/n] " ANSWER
 [ "$ANSWER" != "Y" ] && [ "$ANSWER" != "y" ] && [ ! -z "$ANSWER" ] && exit 1
 
+# Link everything in config directory
 mkdir -p $CFG_DIR && cd $CFG_DIR && echo "Changed into $CFG_DIR"
 for DIR in $(find $REL_DOTFILES_DIR/config -maxdepth 1 -mindepth 1); do
-    DIR_NAME=$(basename $DIR)
-    link-inode $DIR $DIR_NAME
+    link-inode $DIR $(basename $DIR)
 done
+cd - >/dev/null
+
+# Link .zshrc
+cd $HOME && echo "Changed into $HOME"
+link-inode .dotfiles/.zshrc .zshrc
+cd - >/dev/null
 
 echo "Symlinks were removed, existing directories were backed up"
 
