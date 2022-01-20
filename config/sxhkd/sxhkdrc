@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	konsole
+	alacritty
 
 # python terminal
 super + p
-	konsole -e bpython
+	alacritty -e ipython
 
 # program launcher
 super + @space
@@ -48,11 +48,11 @@ XF86MonBrightnessDown
 
 # screenshots
 Print
-	$HOME/.config/i3/screenshot_display.sh
+	screenshot-display
 shift + Print
-	$HOME/.config/i3/screenshot_select.sh
+	screenshot-select
 ctrl + Print
-	$HOME/.config/i3/screenshot_window.sh
+	screenshot-window
 
 # lock session
 super + l

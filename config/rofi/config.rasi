@@ -52,11 +52,13 @@ configuration {
     highlight: bold #ebdbb2;
 }
 window {
-    height:   60%;
+    height:   80%;
     width: 30em;
+    margin: 35% 0 0 0;
     border:  1px 1px 1px 1px;
     border-color: @lightblack;
     border-radius: 5px;
+    location: north;
     text-color: @lightwhite;
 }
 
