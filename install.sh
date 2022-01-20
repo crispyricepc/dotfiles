@@ -59,6 +59,22 @@ required() {
     return $FOUND
 }
 
+link-inode() {
+    SRC=$1
+    DST=$2
+    printf "Linking $SRC -> $DST... "
+    [ -L $DST ] && {
+        printf "${YELLOW}RMLINK ${RESET}"
+        rm $DST
+    }
+    [ -d $DST ] && {
+        printf "${YELLOW}BACKUP ${RESET}"
+        mv $DST $DST.bak
+    }
+    ln -sf $SRC $DST &&
+        echo -e "${GREEN}DONE${RESET}"
+}
+
 echo "Checking dependencies..."
 required && echo -e "${GREEN}SUCCESS${RESET}: All dependencies found" ||
     echo -e >&2 "${YELLOW}WARNING${RESET}: Some dependencies were missing. Some features may not work"
@@ -69,16 +85,7 @@ read -p "Would you like to begin the installation? [Y/n] " ANSWER
 mkdir -p $CFG_DIR && cd $CFG_DIR && echo "Changed into $CFG_DIR"
 for DIR in $(find $REL_DOTFILES_DIR/config -maxdepth 1 -mindepth 1); do
     DIR_NAME=$(basename $DIR)
-    printf "Linking $DIR_NAME -> $DIR... "
-    [ -L $DIR_NAME ] && {
-        printf "${YELLOW}RMLINK ${RESET}"
-        rm -rf $DIR_NAME
-    }
-    [ -d $DIR_NAME ] && {
-        printf "${YELLOW}BACKUP ${RESET}"
-        mv $DIR_NAME $DIR_NAME.bak
-    }
-    ln -sf $DIR $DIR_NAME && echo -e "${GREEN}DONE${RESET}"
+    link-inode $DIR $DIR_NAME
 done
 
 echo "Symlinks were removed, existing directories were backed up"
