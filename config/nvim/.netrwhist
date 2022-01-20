@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/ben/.config'
+let g:netrw_dirhist_3='/home/ben/.config/kitty'
+let g:netrw_dirhist_2='/home/ben/.var/app/io.typora.Typora/config/Typora/conf'
+let g:netrw_dirhist_1='/home/benjo/.dotfiles/gui/config/i3'
