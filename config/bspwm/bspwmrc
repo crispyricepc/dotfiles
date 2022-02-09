@@ -22,6 +22,7 @@ bspc config pointer_motion_interval 7ms
 
 bspc rule -a Code desktop=IV follow=on
 bspc rule -a Steam desktop=VI follow=on
+bspc rule -a "Microsoft Teams - Preview" desktop=IX follow=off
 bspc rule -a discord desktop=I follow=off
 bspc rule -a obs desktop=III follow=off
 bspc rule -a android-messages-desktop desktop=VIII follow=off
@@ -30,12 +31,12 @@ bspc rule -a android-messages-desktop desktop=VIII follow=off
 [ -z ${BSPWM_OPENED+x} ] && dex -a && BSPWM_OPENED=1
 
 # Set background
-feh --bg-scale ~/.config/wall
+feh --bg-scale ~/.config/wall > $HOME/.log/feh.stdout 2> $HOME/.log/feh.stderr
 # Polybar
-$HOME/.config/polybar/launch_polybar.sh
+$HOME/.config/polybar/launch_polybar.sh > $HOME/.log/polybar.stdout 2> $HOME/.log/polybar.stderr
 
 # pkill light-locker ; light-locker
 
-picom &
+picom & > $HOME/.log/picom.stdout 2> $HOME/.log/picom.stderr
 
 notify-send "Refreshed BSPWM"

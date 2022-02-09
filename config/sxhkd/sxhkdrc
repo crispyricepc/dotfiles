@@ -6,6 +6,10 @@
 super + Return
 	alacritty
 
+# launch ranger
+super + o
+    alacritty -e ranger
+
 # python terminal
 super + p
 	alacritty -e ipython
