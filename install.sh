@@ -89,9 +89,10 @@ for DIR in $(find $REL_DOTFILES_DIR/config -maxdepth 1 -mindepth 1); do
 done
 cd - >/dev/null
 
-# Link .zshrc
+# Link .zshrc & .zprofile
 cd $HOME && echo "Changed into $HOME"
 link-inode .dotfiles/.zshrc .zshrc
+link-inode .dotfiles/.zprofile .zprofile
 cd - >/dev/null
 
 echo "Symlinks were removed, existing directories were backed up"
