@@ -35,8 +35,6 @@ feh --bg-scale ~/.config/wall > $HOME/.log/feh.stdout 2> $HOME/.log/feh.stderr
 # Polybar
 $HOME/.config/polybar/launch_polybar.sh > $HOME/.log/polybar.stdout 2> $HOME/.log/polybar.stderr
 
-# pkill light-locker ; light-locker
-
 picom & > $HOME/.log/picom.stdout 2> $HOME/.log/picom.stderr
 
 notify-send "Refreshed BSPWM"

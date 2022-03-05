@@ -60,7 +60,7 @@ ctrl + Print
 
 # lock session
 super + l
-	light-locker-command -l
+	cinnamon-screensaver-command -l
 
 #
 # bspwm hotkeys
