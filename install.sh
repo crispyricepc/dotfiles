@@ -57,6 +57,7 @@ required() {
     file-exists /usr/lib/polkit-kde-authentication-agent-1 || FOUND=1
     font-exists 'CaskaydiaCove Nerd Font' || FOUND=1
     font-exists 'Cascadia Code' || FOUND=1
+    font-exists 'Carlito' || FOUND=1
     
     return $FOUND
 }
