@@ -39,6 +39,8 @@ required() {
     FOUND=0
     command-exists zsh || FOUND=1
     command-exists bspwm || FOUND=1
+    command-exists sxhkd || FOUND=1
+    command-exists alacritty || FOUND=1
     command-exists polybar || FOUND=1
     command-exists rofi || FOUND=1
     command-exists feh || FOUND=1
