@@ -58,6 +58,7 @@ required() {
     font-exists 'CaskaydiaCove Nerd Font' || FOUND=1
     font-exists 'Cascadia Code' || FOUND=1
     font-exists 'Carlito' || FOUND=1
+    font-exists 'Caladea' || FOUND=1
     
     return $FOUND
 }
