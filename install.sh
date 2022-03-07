@@ -55,8 +55,8 @@ required() {
     command-exists rsync || FOUND=1
     dir-exists /usr/share/icons/Papirus || FOUND=1
     file-exists /usr/lib/polkit-kde-authentication-agent-1 || FOUND=1
-    font-exists 'JetBrainsMono Nerd Font' || FOUND=1
-    font-exists 'JetBrains Mono' || FOUND=1
+    font-exists 'CaskaydiaCove Nerd Font' || FOUND=1
+    font-exists 'Cascadia Code' || FOUND=1
     
     return $FOUND
 }
