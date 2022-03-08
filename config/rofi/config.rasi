@@ -1,136 +1,18 @@
-/**
- * User: qball
- * Copyright: Dave Davenport
- * Modified by CRISPYrice
- */
-
 configuration {
-    show-icons:     true;
-    display-combi:  "> ";
-    display-drun:   "";
-    display-ssh:    "";
-    font:           "Carlito 12";
-}
-
-* {
-    text-color:  #ffeedd;
-    background-color:  rgba(0,0,0,0);
-    dark: #22272e;
-    // Black
-    black:          #545d68;
-    lightblack:     #636e7b;
-    //
-    // Red
-    red:            #f47067;
-    lightred:       #ff938a;
-    //
-    // Green
-    green:          #57ab5a;
-    lightgreen:     #6bc46d;
-    //
-    // Yellow
-    yellow:         #c69026;
-    lightyellow:    #daaa3f;
-    //
-    // Blue
-    blue:           #539bf5;
-    lightblue:      #6cb6ff;
-    //
-    // Magenta
-    magenta:        #b083f0;
-    lightmagenta:   #dcbdfb;
-    //
-    // Cyan
-    cyan:           #39c5cf;
-    lightcyan:      #56d4dd;
-    //
-    // White
-    white:          #909dab;
-    lightwhite:     #cdd9e5;
-    //
-    // Bold, Italic, Underline
-    highlight: bold #ebdbb2;
-}
-window {
-    height:   80%;
-    width: 30em;
-    margin: 35% 0 0 0;
-    border:  1px 1px 1px 1px;
-    border-color: @lightblack;
-    border-radius: 5px;
-    location: north;
-    text-color: @lightwhite;
-}
-
-mode-switcher {
-    border: 2px 0px 0px 0px;
-    background-color: @black;
-    padding: 4px;
-}
-button selected {
-    border-color: @lightgreen;
-    text-color: @lightgreen;
-}
-inputbar {
-    background-color: @black;
-    text-color: @lightgreen;
-    padding: 1em;
-    border: 0px 0px 2px 0px;
-}
-mainbox {
-    expand: true;
-    background-color: @dark;
-    spacing: 1em;
-}
-listview {
-    padding: 0em 1em 0em 1em;
-    dynamic: false;
-    lines: 0;
-}
-
-element {
-    padding: 1em 1em 1em 1em;
-    border-radius: 5px;
-}
-element-icon {
-    size: 32px;
-}
-element-text {
-    expand: true;
-    vertical-align: 0.5;
-    margin: 0em 0em 0em 0.5em;
-}
-
-element selected  normal {
-    background-color: @blue;
-}
-element normal active {
-    text-color: @lightblue;
-}
-element normal urgent {
-    text-color: @lightred;
-}
-element alternate normal {
-}
-element alternate active {
-    text-color: @lightblue;
-}
-element alternate urgent {
-    text-color: @lightred;
-}
-element selected active {
-    background-color: @lightblue;
-    text-color: @dark;
-}
-element selected urgent {
-    background-color: @lightred;
-    text-color: @dark;
-}
-
-error-message {
-    expand: true;
-    background-color: red;
-    border-color: darkred;
-    border: 2px;
-    padding: 1em;
+  modi: "window,run,ssh,drun";
+  font: "sans 12";
+  show-icons: true;
+  sidebar-mode: true;
+  hover-select: true;
+  scroll-method: 2;
+  max-history-size: 10;
+  combi-display-format: "{text}";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
 }
