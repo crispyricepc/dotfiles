@@ -3,6 +3,6 @@
 # alias l="ls -lh"
 
 alias ls="exa --icons -1h"
-alias cat="bat --paging never --style plain"
+alias cat="bat --style plain"
 alias edit="$EDITOR"
 alias aur="pikaur"
