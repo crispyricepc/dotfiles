@@ -61,7 +61,8 @@
     },
     "clock#2": {
         "format": "{:%T}",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 1
     },
     "clock#3": {
         "format": "{:%d %B, '%y}",
