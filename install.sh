@@ -41,6 +41,9 @@ required() {
     command-exists sway || FOUND=1
     command-exists foot || FOUND=1
     command-exists waybar || FOUND=1
+    command-exists playerctl || FOUND=1
+    command-exists brightnessctl || FOUND=1
+    command-exists wob || FOUND=1
     command-exists rofi || FOUND=1
     command-exists feh || FOUND=1
     command-exists dunst || FOUND=1
