@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+for FILE in ${XDG_CONFIG_DIR:-$HOME/.config}/river/init.d/*; do
+    [ -f $FILE ] && . $FILE
+done
