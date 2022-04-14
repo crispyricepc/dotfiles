@@ -3,3 +3,5 @@ crispyricepc/dotfiles
 I distro/wm hop quite a lot, so these dotfiles contain configurations for multiple window managers
 
 Use ./install.sh to check for any dependencies needed, and symlink all the relevant files to your home directory locations
+
+You can run the install script without installing one or more dependencies. It only checks in order to let you know what features you shouldn't expect to work
