@@ -15,3 +15,7 @@ function cp {
     rsync "${(@)new_args}"
 }
 
+# A better diff
+function batdiff() {
+    bat --diff .zshrc
+}
