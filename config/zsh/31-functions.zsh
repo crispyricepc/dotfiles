@@ -19,3 +19,13 @@ function cp {
 function batdiff() {
     bat --diff .zshrc
 }
+
+# Get the last 24 hours of logs, pretty printed, with search queries
+function 24h {
+    journalctl --since yesterday | grep "$@" - | cat --language=log
+}
+
+# Get a cheat sheet for a particular command
+function cmdsht {
+    curl -sSL cht.sh/"$@" | cat
+}
