@@ -29,3 +29,8 @@ function 24h {
 function cmdsht {
     curl -sSL cht.sh/"$@" | cat
 }
+
+# Search using fd-find and fzf
+function search {
+    fd . "$1" | fzf "${@:2}"
+}
