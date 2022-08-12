@@ -3,6 +3,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'navarasu/onedark.nvim'
+Plug 'github/copilot.vim'
 call plug#end()
 
 set number

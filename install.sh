@@ -38,12 +38,14 @@ font-exists() {
 required() {
     FOUND=0
     command-exists zsh || FOUND=1
+    command-exists fortune || FOUND=1
     command-exists sway || FOUND=1
     command-exists foot || FOUND=1
     command-exists waybar || FOUND=1
     command-exists playerctl || FOUND=1
     command-exists brightnessctl || FOUND=1
     command-exists wob || FOUND=1
+    command-exists wofi || FOUND=1
     command-exists rofi || FOUND=1
     command-exists feh || FOUND=1
     command-exists dunst || FOUND=1
@@ -55,7 +57,7 @@ required() {
     command-exists exa || FOUND=1
     command-exists bat || FOUND=1
     command-exists rsync || FOUND=1
-    dir-exists /usr/share/icons/Papirus || FOUND=1
+    dir-exists /usr/share/icons/Adwaita || FOUND=1
     file-exists /usr/lib/polkit-kde-authentication-agent-1 || FOUND=1
     file-exists "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim || FOUND=1
     font-exists 'CaskaydiaCove Nerd Font' || FOUND=1
