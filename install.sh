@@ -43,6 +43,9 @@ required() {
     command-exists foot || FOUND=1
     command-exists waybar || FOUND=1
     command-exists playerctl || FOUND=1
+    command-exists pamixer || FOUND=1
+    command-exists grimshot || FOUND=1
+    command-exists wl-copy || FOUND=1
     command-exists brightnessctl || FOUND=1
     command-exists wob || FOUND=1
     command-exists wofi || FOUND=1
