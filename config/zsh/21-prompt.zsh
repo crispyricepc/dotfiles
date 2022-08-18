@@ -3,7 +3,7 @@
 setopt PROMPT_SUBST
 
 prompt() {
-     PROMPT="[%F{magenta}%n%f@%F{yellow}%m%f:%F{blue}%~%f] $(__git_ps1 "(%s) ")%(?.%F{green}%(!.#.$)%f.%F{red}%? %(!.#.$)%f) "
+     PROMPT="[%B%F{magenta}%n%f%b@%B%F{yellow}%m%f%b:%F{blue}%~%f] $(__git_ps1 "(%s) ")%(?.%F{green}%(!.#.$)%f.%F{red}%? %(!.#.$)%f) "
 }
 
 precmd_functions+=(prompt)
