@@ -1,53 +1,32 @@
 * {
 	font-size: 14px;
-	font-family: 'Cantarell', monospace;
+	font-family: 'CaskaydiaCove Nerd Font', monospace;
 }
 
 window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
+	opacity: 0.95;
+	background: #282c34;
+	color: #abb2bf;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	font-size: 1.3rem;
-	color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	font-size: 1.3rem;
-	color: #292b2e;
-	background: #1a1a1a;
+#window {
+	margin: 0.8rem;
 }
 
-#workspaces,
-#clock.1,
-#clock.2,
-#clock.3,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk,
-#tray {
+.modules-left {
+	border-radius: 0.5rem;
+	margin: 0.2rem;
 	background: #1a1a1a;
 }
 
 #workspaces button {
-	padding: 0 2px;
-	color: #fdf6e3;
+	padding: 0 1rem;
+	color: #abb2bf;
 }
 #workspaces button.focused {
-	color: #268bd2;
-}
-#workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-}
-#workspaces button:hover {
-	background: #1a1a1a;
-	border: #1a1a1a;
-	padding: 0 3px;
+	color: #c678dd;
 }
 
 #pulseaudio {
@@ -68,7 +47,6 @@ window#waybar {
 
 #clock,
 #pulseaudio,
-#memory,
 #cpu,
 #battery,
 #disk {
