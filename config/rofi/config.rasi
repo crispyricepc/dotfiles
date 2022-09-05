@@ -1,5 +1,5 @@
 configuration {
-  modi: "window,run,ssh,drun";
+  modi: "run,ssh,drun";
   font: "sans 12";
   show-icons: true;
   sidebar-mode: true;
@@ -16,3 +16,5 @@ configuration {
       sorting-method:    "name";
   }
 }
+
+@theme "~/.config/rofi/rounded-common.rasi"
