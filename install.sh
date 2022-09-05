@@ -47,6 +47,7 @@ required() {
     command-exists grimshot || FOUND=1
     command-exists wl-copy || FOUND=1
     command-exists brightnessctl || FOUND=1
+    command-exists nitch || FOUND=1
     command-exists wob || FOUND=1
     command-exists wofi || FOUND=1
     command-exists rofi || FOUND=1
