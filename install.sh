@@ -41,6 +41,7 @@ required() {
     command-exists fortune || FOUND=1
     command-exists sway || FOUND=1
     command-exists swaybg || FOUND=1
+    command-exists swaylock || FOUND=1
     command-exists foot || FOUND=1
     command-exists waybar || FOUND=1
     command-exists playerctl || FOUND=1
