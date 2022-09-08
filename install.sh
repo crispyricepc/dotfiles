@@ -42,6 +42,7 @@ required() {
     command-exists sway || FOUND=1
     command-exists swaybg || FOUND=1
     command-exists swaylock || FOUND=1
+    command-exists swayidle || FOUND=1
     command-exists foot || FOUND=1
     command-exists waybar || FOUND=1
     command-exists playerctl || FOUND=1
@@ -65,6 +66,7 @@ required() {
     command-exists rsync || FOUND=1
     dir-exists /usr/share/icons/Adwaita || FOUND=1
     file-exists /usr/lib/polkit-kde-authentication-agent-1 || FOUND=1
+    file-exists /usr/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh || FOUND=1
     file-exists "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim || FOUND=1
     font-exists 'CaskaydiaCove Nerd Font' || FOUND=1
     font-exists 'Cascadia Code' || FOUND=1
