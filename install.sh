@@ -43,6 +43,7 @@ required() {
     command-exists swaybg || FOUND=1
     command-exists swaylock || FOUND=1
     command-exists swayidle || FOUND=1
+    command-exists sov || FOUND=1
     command-exists foot || FOUND=1
     command-exists waybar || FOUND=1
     command-exists playerctl || FOUND=1
