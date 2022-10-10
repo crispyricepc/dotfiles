@@ -4,70 +4,22 @@
 
 # terminal emulator
 super + Return
-	alacritty
-
-# launch ranger
-super + o
-    alacritty -e ranger
-
-# python terminal
-super + p
-	alacritty -e ipython
+	urxvt
 
 # program launcher
 super + @space
-	rofi -combi-modi drun,ssh -show combi
-
-# emoji picker
-super + period
-	rofi -show emoji -modi emoji
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd && notify-send "Restarted SXHKD"
-
-# volume controls
-XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +2%
-XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ -2%
-XF86AudioMute
-	pactl set-sink-mute @DEFAULT_SINK@ toggle
-XF86AudioMicMute
-	pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
-# media controls
-XF86AudioPlay
-	playerctl play-pause
-XF86AudioNext
-	playerctl next
-XF86AudioPrev
-	playerctl previous
-
-# brightness controls
-XF86MonBrightnessUp
-	xbacklight -inc 10
-XF86MonBrightnessDown
-	xbacklight -dec 10
-
-# screenshots
-Print
-	screenshot-display
-shift + Print
-	screenshot-select
-ctrl + Print
-	screenshot-window
-
-# lock session
-super + l
-	cinnamon-screensaver-command -l
+	pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys
 #
 
 # quit/restart bspwm
-super + shift + {q,r}
+super + shift + {e,r}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -91,16 +43,8 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,f}
-	bspc node -t {tiled,pseudo_tiled,fullscreen}
-
-# toggle floating
-super + shift + space
-	if [ -z "$(bspc query -N -n focused.floating)" ]; then \                    
-		bspc node focused -t floating; \                                        
-	else \                                                                      
-		bspc node focused -t tiled; \                                           
-	fi
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -137,8 +81,8 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1,2,3,4,5,6,7,8,9,0}
-	bspc {desktop -f,node -d} {I,II,III,IV,V,VI,VII,VIII,IX,X} --follow
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
 # preselect
