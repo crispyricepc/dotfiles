@@ -13,4 +13,14 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="sftp://steamdeck/" added="2022-10-13T11:27:17.120297Z" modified="2022-10-13T11:27:17.120301Z" visited="2022-10-13T11:27:17.120298Z">
+    <title>/ on steamdeck</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2022-10-13T11:27:17.120300Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

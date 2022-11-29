@@ -1,0 +1,10 @@
+<!ELEMENT fontconfig (match,alias+)>
+<!ELEMENT match (edit)>
+<!ATTLIST match target NMTOKEN #REQUIRED>
+<!ELEMENT edit (bool)>
+<!ATTLIST edit name NMTOKEN #REQUIRED>
+<!ATTLIST edit mode NMTOKEN #REQUIRED>
+<!ELEMENT bool (#PCDATA)>
+<!ELEMENT alias (family,prefer)>
+<!ELEMENT family (#PCDATA)>
+<!ELEMENT prefer (family+)>
