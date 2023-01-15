@@ -7,6 +7,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
+Plug 'mechatroner/rainbow_csv'
 
 Plug 'navarasu/onedark.nvim'
 call plug#end()
