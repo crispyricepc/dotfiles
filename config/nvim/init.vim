@@ -36,8 +36,11 @@ require('trouble').setup{
   \ }
 END
 
+" Ignorecase shortcut "
+nmap <F9> :set ignorecase! ignorecase? <CR>
+
 " Small edit to onedark colour scheme to have less bright highlights
-autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A
+autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A "
 
 let g:onedark_config = {
   \ 'style': 'dark',

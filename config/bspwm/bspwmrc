@@ -11,13 +11,14 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+bspc rule -a steam desktop='^2'
 bspc rule -a obs desktop='^10'
 
 # Reload xrdb
 xrdb ~/.Xresources
 
 # Start discord and steam
-steam &
+steam -newbigpicture &
 discord --ozone-platform=x11 &
 obs --startreplaybuffer --minimize-to-tray &
 
