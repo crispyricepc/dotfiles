@@ -4,6 +4,6 @@
 
 alias ls="exa --icons -1h"
 alias cat="bat --style plain"
-alias edit="$EDITOR"
+alias edit="\$EDITOR"
 alias aur="pikaur"
 alias man="BROWSER=firefox man --html"
