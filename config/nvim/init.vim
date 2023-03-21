@@ -9,8 +9,10 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 Plug 'mechatroner/rainbow_csv'
 
-Plug 'navarasu/onedark.nvim'
+Plug 'morhetz/gruvbox'
 call plug#end()
+
+autocmd vimenter * ++nested colorscheme gruvbox
 
 set number
 set tabstop=4
@@ -38,15 +40,6 @@ END
 
 " Ignorecase shortcut "
 nmap <F9> :set ignorecase! ignorecase? <CR>
-
-" Small edit to onedark colour scheme to have less bright highlights
-autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A "
-
-let g:onedark_config = {
-  \ 'style': 'dark',
-  \ 'transparent': v:true
-\ }
-colorscheme onedark
 
 " coc.nvim configuration
 

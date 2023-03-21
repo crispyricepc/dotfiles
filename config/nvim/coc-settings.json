@@ -1,11 +1,18 @@
 {
     "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
-    "coc.preferences.formatOnSaveFiletypes": ["rust"],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "rust",
+        "cpp",
+        "json"
+    ],
     "coc.preferences.useQuickfixForLocations": true,
     "languageserver": {
         "vala": {
             "command": "vala-language-server",
-            "filetypes": ["vala", "genie"]
+            "filetypes": [
+                "vala",
+                "genie"
+            ]
         }
     }
 }
