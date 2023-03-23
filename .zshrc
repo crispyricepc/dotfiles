@@ -13,3 +13,11 @@ test -d /usr/share/zsh/plugins &&
 for PLUG in /usr/share/zsh/plugins/*; do
     [ -d $PLUG ] && source $PLUG/*.plugin.zsh
 done
+
+test -d $HOME/.local/share/zsh/plugins &&
+for PLUG in $HOME/.local/share/zsh/plugins/*; do
+    [ -d $PLUG ] && source $PLUG/*.plugin.zsh
+done
+
+true # clears any negative return code
+
