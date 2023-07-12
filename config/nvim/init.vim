@@ -9,10 +9,11 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 Plug 'mechatroner/rainbow_csv'
 
-Plug 'morhetz/gruvbox'
+Plug 'Mofiqul/vscode.nvim'
 call plug#end()
 
-autocmd vimenter * ++nested colorscheme gruvbox
+" Source lua
+lua require('main')
 
 set number
 set tabstop=4
@@ -24,25 +25,10 @@ set smartindent
 set clipboard+=unnamedplus
 set mouse=a
 
-lua << END
-require('lualine').setup {
-            \ sections = { lualine_a = {'g:coc_status', 'bo:filetype'} }
-      \ }
-require('nvim-tree').setup()
-require('trouble').setup{
-    \ position = "bottom",
-    \ auto_open = true,
-    \ auto_close = true,
-    \ height = 10,
-    \ mode = "loclist"
-  \ }
-END
-
 " Ignorecase shortcut "
 nmap <F9> :set ignorecase! ignorecase? <CR>
 
 " coc.nvim configuration
-
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
