@@ -3,7 +3,11 @@
 # alias l="ls -lh"
 
 alias ls="exa --icons -1h"
-alias cat="bat --style=plain --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo OneHalfDark || echo OneHalfLight)"
+if [[ $OSTYPE == "darwin"* ]]; then
+    alias cat="bat --style=plain --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo OneHalfDark || echo OneHalfLight)"
+else
+    alias cat="bat --style=plain --theme=\$([[ \$(gsettings get org.gnome.desktop.interface color-scheme) == \'prefer-dark\' ]] && echo OneHalfDark || echo OneHalfLight)"
+fi
 alias edit="\$EDITOR"
-alias aur="pikaur"
+alias aur="yay"
 alias man="BROWSER=firefox man --html"

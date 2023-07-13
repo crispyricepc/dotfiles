@@ -7,7 +7,7 @@ D_RIGHT=L
 riverctl map normal Super Return spawn $TERM_PROGRAM # Spawn terminal
 riverctl map normal Super Space spawn 'wofi --show drun' # Spawn menu
 
-riverctl map normal Super W close # Close focused view
+riverctl map normal Super Q close # Close focused view
 riverctl map normal Super+Shift E exit # Exit river
 
 riverctl map normal Super+Shift Space toggle-float # Toggle float
