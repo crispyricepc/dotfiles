@@ -13,7 +13,7 @@ Plug 'Mofiqul/vscode.nvim'
 call plug#end()
 
 " Source lua
-lua require('main')
+lua require('init')
 
 set number
 set tabstop=4
