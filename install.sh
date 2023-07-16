@@ -43,6 +43,7 @@ required() {
     command-exists swaybg || FOUND=1
     command-exists swaylock || FOUND=1
     command-exists swayidle || FOUND=1
+    command-exists wlogout || FOUND=1
     command-exists sov || FOUND=1
     command-exists foot || FOUND=1
     command-exists waybar || FOUND=1
@@ -53,15 +54,10 @@ required() {
     command-exists brightnessctl || FOUND=1
     command-exists nitch || FOUND=1
     command-exists wob || FOUND=1
-    command-exists wofi || FOUND=1
     command-exists rofi || FOUND=1
-    command-exists feh || FOUND=1
     command-exists dunst || FOUND=1
     command-exists dex || FOUND=1
     command-exists maim || FOUND=1
-    command-exists xclip || FOUND=1
-    command-exists xdotool || FOUND=1
-    command-exists picom || FOUND=1
     command-exists exa || FOUND=1
     command-exists bat || FOUND=1
     command-exists rsync || FOUND=1

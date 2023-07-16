@@ -30,11 +30,11 @@
         "format-bluetooth": "{volume:2}% {icon}",
         "format-muted": "{volume:2}% 婢",
         "format-icons": {
-            "headphones": "",
+            "headphones": "󰋋",
             "default": [
-                "奄",
-                "奔",
-                "墳"
+                "󰕿",
+                "󰖀",
+                "󰕾"
             ]
         },
         "scroll-step": 5,
@@ -43,7 +43,7 @@
     },
     "cpu": {
         "interval": 5,
-        "format": "{usage:2}% "
+        "format": "{usage:2}% 󰍛"
     },
     "battery": {
         "states": {
